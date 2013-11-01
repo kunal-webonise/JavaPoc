@@ -7,7 +7,10 @@
 
 			<head>
 				<title>CD Catalog</title>
+				<!-- <link rel="stylesheet" type="text/css" href="style.css"> </link>  -->
 				<style type="text/css">
+
+
 					table {
 					font-family: verdana;
 					}
@@ -29,7 +32,8 @@
 					border-bottom: 1px solid #336699;
 					font: 16
 					verdana;
-					padding: 0 0 0 15px;
+					padding: 0 0 0
+					15px;
 					}
 
 					.red {
@@ -48,11 +52,23 @@
 					#437841;
 
 					}
-					
-					div
-					{
-					display: inline
+
+					.track {
+					margin-top: 25px;
+					color: #666;
+					line-height: 30px;
+					font-size: 30px;
+					font-family: paddockextbold;
+					letter-spacing: -2px;
+					text-transform: capitalize;
 					}
+
+					.distance {
+					margin-left: 10px;
+					font-size: 19px;
+					color: blue;
+					}
+
 				</style>
 			</head>
 
@@ -74,6 +90,20 @@
 					<div class='red'>
 						<xsl:value-of select="raceData/race/raceDate" />
 					</div>
+					<div class="trackInfoWrapper">
+						<span class="track">
+							<xsl:value-of select="raceData/race/trackId" />
+						</span>
+						<span class="distance"><xsl:value-of select="raceData/distanceDescription" /></span>
+						
+						<span class="winningTime"><xsl:value-of select="/raceData/distanceDescription" /></span>
+						
+						<span class="demo">
+							<span class="filliesOrMaresIcon">{filliesOrMaresIcon:this.getFilesOrMaresIcon}</span>
+						</span>
+						<span class="condition">{condition}</span>
+						<span class="purse">Purse ${purseUSA:this.getPurseAmount}</span>
+					</div>
 					<table>
 						<tr>
 							<td class='title col1'>ReG no</td>
@@ -88,12 +118,96 @@
 						<xsl:for-each select="/raceData/horses">
 
 							<tr>
-								<td class='col1'><xsl:value-of select="registrationNumber" /></td>
-								<td class='col1'><xsl:value-of select="morningLineOdds" /></td>
-								<td class='col1'><xsl:value-of select="color" /></td>
-								<td class='col1'><xsl:value-of select="damName" /></td>
-								<td class='col1'><xsl:value-of select="sireName" /></td>
-								<td class='col1'><xsl:value-of select="ownerName" /></td>
+								<td class='col1'>
+									<xsl:value-of select="registrationNumber" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="morningLineOdds" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="color" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="damName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="sireName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="ownerName" />
+								</td>
+							</tr>
+
+						</xsl:for-each>
+						<xsl:for-each select="/raceData/horses">
+
+							<tr>
+								<td class='col1'>
+									<xsl:value-of select="registrationNumber" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="morningLineOdds" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="color" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="damName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="sireName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="ownerName" />
+								</td>
+							</tr>
+
+						</xsl:for-each>
+						<xsl:for-each select="/raceData/horses">
+
+							<tr>
+								<td class='col1'>
+									<xsl:value-of select="registrationNumber" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="morningLineOdds" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="color" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="damName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="sireName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="ownerName" />
+								</td>
+							</tr>
+
+						</xsl:for-each>
+						<xsl:for-each select="/raceData/horses">
+
+							<tr>
+								<td class='col1'>
+									<xsl:value-of select="registrationNumber" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="morningLineOdds" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="color" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="damName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="sireName" />
+								</td>
+								<td class='col1'>
+									<xsl:value-of select="ownerName" />
+								</td>
 							</tr>
 
 						</xsl:for-each>

@@ -17,5 +17,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/webonise/Desktop/form/drf-common.jar"/>
+	<classpathentry kind="lib" path="/home/webonise/Desktop/form/pdfcrowd-2.6-java.zip"/>
+	<classpathentry kind="lib" path="/home/webonise/Desktop/form/pdfcrowd-2.6-java/pdfcrowd.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
